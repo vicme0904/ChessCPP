@@ -3,7 +3,7 @@
 
 using namespace std;
 
-board::board()
+Board::Board()
 {
 	for(int row = 0; row < 8; ++row)
 	{
@@ -14,18 +14,24 @@ board::board()
 	}
 }
 
-bool board::isInsideBoard(int row, int col)
+
+void Board::Initialize()
+{
+
+}
+
+bool Board::isInsideBoard(int row, int col)
 {
 	return row >= 0 && row < 8 && 
 			col >= 0 && col < 8;
 }
 
-piece* board::getPiece(int row, int col)
+Piece* Board::getPiece(int row, int col)
 {
 	return grid[row][col];
 }
 
-void board::printBoard()
+void Board::printBoard()
 {
 	cout << "\n";
 
@@ -41,11 +47,20 @@ void board::printBoard()
 			}
 			else
 			{
-				cout << ". ";
+				cout << " ";
 			}
 		}
 		cout << "\n";
 	}
 
-	cout 
+	cout << "  a b c d e f g h\n";
+}
+
+bool Board::movePiece(
+	int startRow,
+	int startCol,
+	int endRow,
+	int endCol)
+{
+	return false;
 }

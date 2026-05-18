@@ -1,18 +1,18 @@
 #pragma once
 #include "piece.h"
 
-class board
+class Board
 {
 private:
-	piece* grid[8][8];
+	Piece* grid[8][8];
 
 public:
-	board();
+	Board();
 	
 	void Initialize();
 	void printBoard();
 
-	piece* getPiece(int row, int col);
+	Piece* getPiece(int row, int col);
 
 	bool movePiece(
 		int startRow, 

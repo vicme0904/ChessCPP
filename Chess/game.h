@@ -1,5 +1,13 @@
 #pragma once
-class game
-{
+#include "board.h"
+
+class Game
+{ 
+private:
+	Board chessBoard;
+
+public:
+	Game();
+	void run();
 };
 

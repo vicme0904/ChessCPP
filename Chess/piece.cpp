@@ -1,16 +1,16 @@
-#include "piece.h"
+#include "Piece.h"
 
-piece::piece(Color pieceColor, char pieceSymbol)
+Piece::Piece(Color pieceColor, char pieceSymbol)
 	: color(pieceColor), symbol(pieceSymbol)
 {
 }
 
-Color piece::getColor() const
+Color Piece::getColor() const
 {
 	return color;
 }
 
-char piece::getSymbol() const
+char Piece::getSymbol() const
 {
 	return symbol;
 }

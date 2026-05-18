@@ -5,18 +5,18 @@ enum class Color
 	Black
 };
 
-class board;
+class Board;
 
-class piece
+class Piece
 {
 protected:
 	Color color;
 	char symbol;
 
 public:
-	piece(Color pieceColor, char pieceSymbol);
+	Piece(Color pieceColor, char pieceSymbol);
 
-	virtual ~piece() = default;
+	virtual ~Piece() = default;
 
 	Color getColor() const;
 
@@ -27,7 +27,7 @@ public:
 		int startCol,
 		int endRow,
 		int endCol,
-		board& Board) = 0;
+		Board& Board) = 0;
 };
 
 
