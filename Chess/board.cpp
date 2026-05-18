@@ -1,5 +1,6 @@
-#include "board.h"
+#include "Board.h"
 #include <iostream>
+#include "Pawn.h"
 
 using namespace std;
 
@@ -14,10 +15,13 @@ Board::Board()
 	}
 }
 
-
 void Board::Initialize()
 {
-
+	for(int col = 0; col < 8; ++col)
+	{
+		grid[1][col] = new Pawn(Color::Black);
+		grid[6][col] = new Pawn(Color::White);
+	}
 }
 
 bool Board::isInsideBoard(int row, int col)
